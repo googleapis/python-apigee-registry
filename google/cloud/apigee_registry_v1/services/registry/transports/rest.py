@@ -29,7 +29,7 @@ from google.api_core import gapic_v1
 from google.protobuf import json_format
 from google.iam.v1 import iam_policy_pb2  # type: ignore
 from google.iam.v1 import policy_pb2  # type: ignore
-from google.cloud.location import locations_pb2 # type: ignore
+from google.cloud.location import locations_pb2  # type: ignore
 from google.longrunning import operations_pb2
 from requests import __version__ as requests_version
 import dataclasses
@@ -308,7 +308,12 @@ class RegistryRestInterceptor:
 
 
     """
-    def pre_create_api(self, request: registry_service.CreateApiRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.CreateApiRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_create_api(
+        self,
+        request: registry_service.CreateApiRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.CreateApiRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for create_api
 
         Override in a subclass to manipulate the request or metadata
@@ -324,7 +329,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_create_api_deployment(self, request: registry_service.CreateApiDeploymentRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.CreateApiDeploymentRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_create_api_deployment(
+        self,
+        request: registry_service.CreateApiDeploymentRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.CreateApiDeploymentRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for create_api_deployment
 
         Override in a subclass to manipulate the request or metadata
@@ -332,7 +342,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_create_api_deployment(self, response: registry_models.ApiDeployment) -> registry_models.ApiDeployment:
+    def post_create_api_deployment(
+        self, response: registry_models.ApiDeployment
+    ) -> registry_models.ApiDeployment:
         """Post-rpc interceptor for create_api_deployment
 
         Override in a subclass to manipulate the response
@@ -340,7 +352,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_create_api_spec(self, request: registry_service.CreateApiSpecRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.CreateApiSpecRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_create_api_spec(
+        self,
+        request: registry_service.CreateApiSpecRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.CreateApiSpecRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for create_api_spec
 
         Override in a subclass to manipulate the request or metadata
@@ -348,7 +365,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_create_api_spec(self, response: registry_models.ApiSpec) -> registry_models.ApiSpec:
+    def post_create_api_spec(
+        self, response: registry_models.ApiSpec
+    ) -> registry_models.ApiSpec:
         """Post-rpc interceptor for create_api_spec
 
         Override in a subclass to manipulate the response
@@ -356,7 +375,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_create_api_version(self, request: registry_service.CreateApiVersionRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.CreateApiVersionRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_create_api_version(
+        self,
+        request: registry_service.CreateApiVersionRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.CreateApiVersionRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for create_api_version
 
         Override in a subclass to manipulate the request or metadata
@@ -364,7 +388,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_create_api_version(self, response: registry_models.ApiVersion) -> registry_models.ApiVersion:
+    def post_create_api_version(
+        self, response: registry_models.ApiVersion
+    ) -> registry_models.ApiVersion:
         """Post-rpc interceptor for create_api_version
 
         Override in a subclass to manipulate the response
@@ -372,7 +398,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_create_artifact(self, request: registry_service.CreateArtifactRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.CreateArtifactRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_create_artifact(
+        self,
+        request: registry_service.CreateArtifactRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.CreateArtifactRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for create_artifact
 
         Override in a subclass to manipulate the request or metadata
@@ -380,7 +411,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_create_artifact(self, response: registry_models.Artifact) -> registry_models.Artifact:
+    def post_create_artifact(
+        self, response: registry_models.Artifact
+    ) -> registry_models.Artifact:
         """Post-rpc interceptor for create_artifact
 
         Override in a subclass to manipulate the response
@@ -388,7 +421,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_delete_api(self, request: registry_service.DeleteApiRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.DeleteApiRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_delete_api(
+        self,
+        request: registry_service.DeleteApiRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.DeleteApiRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for delete_api
 
         Override in a subclass to manipulate the request or metadata
@@ -396,7 +434,11 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def pre_delete_api_deployment(self, request: registry_service.DeleteApiDeploymentRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.DeleteApiDeploymentRequest, Sequence[Tuple[str, str]]]:
+    def pre_delete_api_deployment(
+        self,
+        request: registry_service.DeleteApiDeploymentRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.DeleteApiDeploymentRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for delete_api_deployment
 
         Override in a subclass to manipulate the request or metadata
@@ -404,7 +446,13 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def pre_delete_api_deployment_revision(self, request: registry_service.DeleteApiDeploymentRevisionRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.DeleteApiDeploymentRevisionRequest, Sequence[Tuple[str, str]]]:
+    def pre_delete_api_deployment_revision(
+        self,
+        request: registry_service.DeleteApiDeploymentRevisionRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[
+        registry_service.DeleteApiDeploymentRevisionRequest, Sequence[Tuple[str, str]]
+    ]:
         """Pre-rpc interceptor for delete_api_deployment_revision
 
         Override in a subclass to manipulate the request or metadata
@@ -412,7 +460,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_delete_api_deployment_revision(self, response: registry_models.ApiDeployment) -> registry_models.ApiDeployment:
+    def post_delete_api_deployment_revision(
+        self, response: registry_models.ApiDeployment
+    ) -> registry_models.ApiDeployment:
         """Post-rpc interceptor for delete_api_deployment_revision
 
         Override in a subclass to manipulate the response
@@ -420,7 +470,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_delete_api_spec(self, request: registry_service.DeleteApiSpecRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.DeleteApiSpecRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_delete_api_spec(
+        self,
+        request: registry_service.DeleteApiSpecRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.DeleteApiSpecRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for delete_api_spec
 
         Override in a subclass to manipulate the request or metadata
@@ -428,7 +483,13 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def pre_delete_api_spec_revision(self, request: registry_service.DeleteApiSpecRevisionRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.DeleteApiSpecRevisionRequest, Sequence[Tuple[str, str]]]:
+    def pre_delete_api_spec_revision(
+        self,
+        request: registry_service.DeleteApiSpecRevisionRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[
+        registry_service.DeleteApiSpecRevisionRequest, Sequence[Tuple[str, str]]
+    ]:
         """Pre-rpc interceptor for delete_api_spec_revision
 
         Override in a subclass to manipulate the request or metadata
@@ -436,7 +497,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_delete_api_spec_revision(self, response: registry_models.ApiSpec) -> registry_models.ApiSpec:
+    def post_delete_api_spec_revision(
+        self, response: registry_models.ApiSpec
+    ) -> registry_models.ApiSpec:
         """Post-rpc interceptor for delete_api_spec_revision
 
         Override in a subclass to manipulate the response
@@ -444,7 +507,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_delete_api_version(self, request: registry_service.DeleteApiVersionRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.DeleteApiVersionRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_delete_api_version(
+        self,
+        request: registry_service.DeleteApiVersionRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.DeleteApiVersionRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for delete_api_version
 
         Override in a subclass to manipulate the request or metadata
@@ -452,7 +520,11 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def pre_delete_artifact(self, request: registry_service.DeleteArtifactRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.DeleteArtifactRequest, Sequence[Tuple[str, str]]]:
+    def pre_delete_artifact(
+        self,
+        request: registry_service.DeleteArtifactRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.DeleteArtifactRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for delete_artifact
 
         Override in a subclass to manipulate the request or metadata
@@ -460,7 +532,11 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def pre_get_api(self, request: registry_service.GetApiRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.GetApiRequest, Sequence[Tuple[str, str]]]:
+    def pre_get_api(
+        self,
+        request: registry_service.GetApiRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.GetApiRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for get_api
 
         Override in a subclass to manipulate the request or metadata
@@ -476,7 +552,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_get_api_deployment(self, request: registry_service.GetApiDeploymentRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.GetApiDeploymentRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_get_api_deployment(
+        self,
+        request: registry_service.GetApiDeploymentRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.GetApiDeploymentRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for get_api_deployment
 
         Override in a subclass to manipulate the request or metadata
@@ -484,7 +565,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_api_deployment(self, response: registry_models.ApiDeployment) -> registry_models.ApiDeployment:
+    def post_get_api_deployment(
+        self, response: registry_models.ApiDeployment
+    ) -> registry_models.ApiDeployment:
         """Post-rpc interceptor for get_api_deployment
 
         Override in a subclass to manipulate the response
@@ -492,7 +575,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_get_api_spec(self, request: registry_service.GetApiSpecRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.GetApiSpecRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_get_api_spec(
+        self,
+        request: registry_service.GetApiSpecRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.GetApiSpecRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for get_api_spec
 
         Override in a subclass to manipulate the request or metadata
@@ -500,7 +588,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_api_spec(self, response: registry_models.ApiSpec) -> registry_models.ApiSpec:
+    def post_get_api_spec(
+        self, response: registry_models.ApiSpec
+    ) -> registry_models.ApiSpec:
         """Post-rpc interceptor for get_api_spec
 
         Override in a subclass to manipulate the response
@@ -508,7 +598,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_get_api_spec_contents(self, request: registry_service.GetApiSpecContentsRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.GetApiSpecContentsRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_get_api_spec_contents(
+        self,
+        request: registry_service.GetApiSpecContentsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.GetApiSpecContentsRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for get_api_spec_contents
 
         Override in a subclass to manipulate the request or metadata
@@ -516,7 +611,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_api_spec_contents(self, response: httpbody_pb2.HttpBody) -> httpbody_pb2.HttpBody:
+    def post_get_api_spec_contents(
+        self, response: httpbody_pb2.HttpBody
+    ) -> httpbody_pb2.HttpBody:
         """Post-rpc interceptor for get_api_spec_contents
 
         Override in a subclass to manipulate the response
@@ -524,7 +621,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_get_api_version(self, request: registry_service.GetApiVersionRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.GetApiVersionRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_get_api_version(
+        self,
+        request: registry_service.GetApiVersionRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.GetApiVersionRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for get_api_version
 
         Override in a subclass to manipulate the request or metadata
@@ -532,7 +634,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_api_version(self, response: registry_models.ApiVersion) -> registry_models.ApiVersion:
+    def post_get_api_version(
+        self, response: registry_models.ApiVersion
+    ) -> registry_models.ApiVersion:
         """Post-rpc interceptor for get_api_version
 
         Override in a subclass to manipulate the response
@@ -540,7 +644,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_get_artifact(self, request: registry_service.GetArtifactRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.GetArtifactRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_get_artifact(
+        self,
+        request: registry_service.GetArtifactRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.GetArtifactRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for get_artifact
 
         Override in a subclass to manipulate the request or metadata
@@ -548,7 +657,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_artifact(self, response: registry_models.Artifact) -> registry_models.Artifact:
+    def post_get_artifact(
+        self, response: registry_models.Artifact
+    ) -> registry_models.Artifact:
         """Post-rpc interceptor for get_artifact
 
         Override in a subclass to manipulate the response
@@ -556,7 +667,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_get_artifact_contents(self, request: registry_service.GetArtifactContentsRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.GetArtifactContentsRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_get_artifact_contents(
+        self,
+        request: registry_service.GetArtifactContentsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.GetArtifactContentsRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for get_artifact_contents
 
         Override in a subclass to manipulate the request or metadata
@@ -564,7 +680,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_artifact_contents(self, response: httpbody_pb2.HttpBody) -> httpbody_pb2.HttpBody:
+    def post_get_artifact_contents(
+        self, response: httpbody_pb2.HttpBody
+    ) -> httpbody_pb2.HttpBody:
         """Post-rpc interceptor for get_artifact_contents
 
         Override in a subclass to manipulate the response
@@ -572,7 +690,14 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_api_deployment_revisions(self, request: registry_service.ListApiDeploymentRevisionsRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.ListApiDeploymentRevisionsRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_list_api_deployment_revisions(
+        self,
+        request: registry_service.ListApiDeploymentRevisionsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[
+        registry_service.ListApiDeploymentRevisionsRequest, Sequence[Tuple[str, str]]
+    ]:
         """Pre-rpc interceptor for list_api_deployment_revisions
 
         Override in a subclass to manipulate the request or metadata
@@ -580,7 +705,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_api_deployment_revisions(self, response: registry_service.ListApiDeploymentRevisionsResponse) -> registry_service.ListApiDeploymentRevisionsResponse:
+    def post_list_api_deployment_revisions(
+        self, response: registry_service.ListApiDeploymentRevisionsResponse
+    ) -> registry_service.ListApiDeploymentRevisionsResponse:
         """Post-rpc interceptor for list_api_deployment_revisions
 
         Override in a subclass to manipulate the response
@@ -588,7 +715,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_api_deployments(self, request: registry_service.ListApiDeploymentsRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.ListApiDeploymentsRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_list_api_deployments(
+        self,
+        request: registry_service.ListApiDeploymentsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.ListApiDeploymentsRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for list_api_deployments
 
         Override in a subclass to manipulate the request or metadata
@@ -596,7 +728,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_api_deployments(self, response: registry_service.ListApiDeploymentsResponse) -> registry_service.ListApiDeploymentsResponse:
+    def post_list_api_deployments(
+        self, response: registry_service.ListApiDeploymentsResponse
+    ) -> registry_service.ListApiDeploymentsResponse:
         """Post-rpc interceptor for list_api_deployments
 
         Override in a subclass to manipulate the response
@@ -604,7 +738,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_apis(self, request: registry_service.ListApisRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.ListApisRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_list_apis(
+        self,
+        request: registry_service.ListApisRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.ListApisRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for list_apis
 
         Override in a subclass to manipulate the request or metadata
@@ -612,7 +751,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_apis(self, response: registry_service.ListApisResponse) -> registry_service.ListApisResponse:
+    def post_list_apis(
+        self, response: registry_service.ListApisResponse
+    ) -> registry_service.ListApisResponse:
         """Post-rpc interceptor for list_apis
 
         Override in a subclass to manipulate the response
@@ -620,7 +761,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_api_spec_revisions(self, request: registry_service.ListApiSpecRevisionsRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.ListApiSpecRevisionsRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_list_api_spec_revisions(
+        self,
+        request: registry_service.ListApiSpecRevisionsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.ListApiSpecRevisionsRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for list_api_spec_revisions
 
         Override in a subclass to manipulate the request or metadata
@@ -628,7 +774,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_api_spec_revisions(self, response: registry_service.ListApiSpecRevisionsResponse) -> registry_service.ListApiSpecRevisionsResponse:
+    def post_list_api_spec_revisions(
+        self, response: registry_service.ListApiSpecRevisionsResponse
+    ) -> registry_service.ListApiSpecRevisionsResponse:
         """Post-rpc interceptor for list_api_spec_revisions
 
         Override in a subclass to manipulate the response
@@ -636,7 +784,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_api_specs(self, request: registry_service.ListApiSpecsRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.ListApiSpecsRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_list_api_specs(
+        self,
+        request: registry_service.ListApiSpecsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.ListApiSpecsRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for list_api_specs
 
         Override in a subclass to manipulate the request or metadata
@@ -644,7 +797,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_api_specs(self, response: registry_service.ListApiSpecsResponse) -> registry_service.ListApiSpecsResponse:
+    def post_list_api_specs(
+        self, response: registry_service.ListApiSpecsResponse
+    ) -> registry_service.ListApiSpecsResponse:
         """Post-rpc interceptor for list_api_specs
 
         Override in a subclass to manipulate the response
@@ -652,7 +807,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_api_versions(self, request: registry_service.ListApiVersionsRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.ListApiVersionsRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_list_api_versions(
+        self,
+        request: registry_service.ListApiVersionsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.ListApiVersionsRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for list_api_versions
 
         Override in a subclass to manipulate the request or metadata
@@ -660,7 +820,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_api_versions(self, response: registry_service.ListApiVersionsResponse) -> registry_service.ListApiVersionsResponse:
+    def post_list_api_versions(
+        self, response: registry_service.ListApiVersionsResponse
+    ) -> registry_service.ListApiVersionsResponse:
         """Post-rpc interceptor for list_api_versions
 
         Override in a subclass to manipulate the response
@@ -668,7 +830,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_artifacts(self, request: registry_service.ListArtifactsRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.ListArtifactsRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_list_artifacts(
+        self,
+        request: registry_service.ListArtifactsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.ListArtifactsRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for list_artifacts
 
         Override in a subclass to manipulate the request or metadata
@@ -676,7 +843,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_artifacts(self, response: registry_service.ListArtifactsResponse) -> registry_service.ListArtifactsResponse:
+    def post_list_artifacts(
+        self, response: registry_service.ListArtifactsResponse
+    ) -> registry_service.ListArtifactsResponse:
         """Post-rpc interceptor for list_artifacts
 
         Override in a subclass to manipulate the response
@@ -684,7 +853,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_replace_artifact(self, request: registry_service.ReplaceArtifactRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.ReplaceArtifactRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_replace_artifact(
+        self,
+        request: registry_service.ReplaceArtifactRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.ReplaceArtifactRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for replace_artifact
 
         Override in a subclass to manipulate the request or metadata
@@ -692,7 +866,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_replace_artifact(self, response: registry_models.Artifact) -> registry_models.Artifact:
+    def post_replace_artifact(
+        self, response: registry_models.Artifact
+    ) -> registry_models.Artifact:
         """Post-rpc interceptor for replace_artifact
 
         Override in a subclass to manipulate the response
@@ -700,7 +876,14 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_rollback_api_deployment(self, request: registry_service.RollbackApiDeploymentRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.RollbackApiDeploymentRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_rollback_api_deployment(
+        self,
+        request: registry_service.RollbackApiDeploymentRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[
+        registry_service.RollbackApiDeploymentRequest, Sequence[Tuple[str, str]]
+    ]:
         """Pre-rpc interceptor for rollback_api_deployment
 
         Override in a subclass to manipulate the request or metadata
@@ -708,7 +891,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_rollback_api_deployment(self, response: registry_models.ApiDeployment) -> registry_models.ApiDeployment:
+    def post_rollback_api_deployment(
+        self, response: registry_models.ApiDeployment
+    ) -> registry_models.ApiDeployment:
         """Post-rpc interceptor for rollback_api_deployment
 
         Override in a subclass to manipulate the response
@@ -716,7 +901,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_rollback_api_spec(self, request: registry_service.RollbackApiSpecRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.RollbackApiSpecRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_rollback_api_spec(
+        self,
+        request: registry_service.RollbackApiSpecRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.RollbackApiSpecRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for rollback_api_spec
 
         Override in a subclass to manipulate the request or metadata
@@ -724,7 +914,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_rollback_api_spec(self, response: registry_models.ApiSpec) -> registry_models.ApiSpec:
+    def post_rollback_api_spec(
+        self, response: registry_models.ApiSpec
+    ) -> registry_models.ApiSpec:
         """Post-rpc interceptor for rollback_api_spec
 
         Override in a subclass to manipulate the response
@@ -732,7 +924,14 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_tag_api_deployment_revision(self, request: registry_service.TagApiDeploymentRevisionRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.TagApiDeploymentRevisionRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_tag_api_deployment_revision(
+        self,
+        request: registry_service.TagApiDeploymentRevisionRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[
+        registry_service.TagApiDeploymentRevisionRequest, Sequence[Tuple[str, str]]
+    ]:
         """Pre-rpc interceptor for tag_api_deployment_revision
 
         Override in a subclass to manipulate the request or metadata
@@ -740,7 +939,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_tag_api_deployment_revision(self, response: registry_models.ApiDeployment) -> registry_models.ApiDeployment:
+    def post_tag_api_deployment_revision(
+        self, response: registry_models.ApiDeployment
+    ) -> registry_models.ApiDeployment:
         """Post-rpc interceptor for tag_api_deployment_revision
 
         Override in a subclass to manipulate the response
@@ -748,7 +949,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_tag_api_spec_revision(self, request: registry_service.TagApiSpecRevisionRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.TagApiSpecRevisionRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_tag_api_spec_revision(
+        self,
+        request: registry_service.TagApiSpecRevisionRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.TagApiSpecRevisionRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for tag_api_spec_revision
 
         Override in a subclass to manipulate the request or metadata
@@ -756,7 +962,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_tag_api_spec_revision(self, response: registry_models.ApiSpec) -> registry_models.ApiSpec:
+    def post_tag_api_spec_revision(
+        self, response: registry_models.ApiSpec
+    ) -> registry_models.ApiSpec:
         """Post-rpc interceptor for tag_api_spec_revision
 
         Override in a subclass to manipulate the response
@@ -764,7 +972,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_update_api(self, request: registry_service.UpdateApiRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.UpdateApiRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_update_api(
+        self,
+        request: registry_service.UpdateApiRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.UpdateApiRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for update_api
 
         Override in a subclass to manipulate the request or metadata
@@ -780,7 +993,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_update_api_deployment(self, request: registry_service.UpdateApiDeploymentRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.UpdateApiDeploymentRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_update_api_deployment(
+        self,
+        request: registry_service.UpdateApiDeploymentRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.UpdateApiDeploymentRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for update_api_deployment
 
         Override in a subclass to manipulate the request or metadata
@@ -788,7 +1006,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_update_api_deployment(self, response: registry_models.ApiDeployment) -> registry_models.ApiDeployment:
+    def post_update_api_deployment(
+        self, response: registry_models.ApiDeployment
+    ) -> registry_models.ApiDeployment:
         """Post-rpc interceptor for update_api_deployment
 
         Override in a subclass to manipulate the response
@@ -796,7 +1016,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_update_api_spec(self, request: registry_service.UpdateApiSpecRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.UpdateApiSpecRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_update_api_spec(
+        self,
+        request: registry_service.UpdateApiSpecRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.UpdateApiSpecRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for update_api_spec
 
         Override in a subclass to manipulate the request or metadata
@@ -804,7 +1029,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_update_api_spec(self, response: registry_models.ApiSpec) -> registry_models.ApiSpec:
+    def post_update_api_spec(
+        self, response: registry_models.ApiSpec
+    ) -> registry_models.ApiSpec:
         """Post-rpc interceptor for update_api_spec
 
         Override in a subclass to manipulate the response
@@ -812,7 +1039,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_update_api_version(self, request: registry_service.UpdateApiVersionRequest, metadata: Sequence[Tuple[str, str]]) -> Tuple[registry_service.UpdateApiVersionRequest, Sequence[Tuple[str, str]]]:
+
+    def pre_update_api_version(
+        self,
+        request: registry_service.UpdateApiVersionRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> Tuple[registry_service.UpdateApiVersionRequest, Sequence[Tuple[str, str]]]:
         """Pre-rpc interceptor for update_api_version
 
         Override in a subclass to manipulate the request or metadata
@@ -820,7 +1052,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_update_api_version(self, response: registry_models.ApiVersion) -> registry_models.ApiVersion:
+    def post_update_api_version(
+        self, response: registry_models.ApiVersion
+    ) -> registry_models.ApiVersion:
         """Post-rpc interceptor for update_api_version
 
         Override in a subclass to manipulate the response
@@ -829,7 +1063,11 @@ class RegistryRestInterceptor:
         """
         return response
 
-    def pre_get_location(self, request: locations_pb2.GetLocationRequest, metadata: Sequence[Tuple[str, str]]) -> locations_pb2.Location:
+    def pre_get_location(
+        self,
+        request: locations_pb2.GetLocationRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> locations_pb2.Location:
         """Pre-rpc interceptor for get_location
 
         Override in a subclass to manipulate the request or metadata
@@ -837,7 +1075,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_location(self, response: locations_pb2.GetLocationRequest) -> locations_pb2.Location:
+    def post_get_location(
+        self, response: locations_pb2.GetLocationRequest
+    ) -> locations_pb2.Location:
         """Post-rpc interceptor for get_location
 
         Override in a subclass to manipulate the response
@@ -845,7 +1085,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_locations(self, request: locations_pb2.ListLocationsRequest, metadata: Sequence[Tuple[str, str]]) -> locations_pb2.ListLocationsResponse:
+
+    def pre_list_locations(
+        self,
+        request: locations_pb2.ListLocationsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> locations_pb2.ListLocationsResponse:
         """Pre-rpc interceptor for list_locations
 
         Override in a subclass to manipulate the request or metadata
@@ -853,7 +1098,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_locations(self, response: locations_pb2.ListLocationsRequest) -> locations_pb2.ListLocationsResponse:
+    def post_list_locations(
+        self, response: locations_pb2.ListLocationsRequest
+    ) -> locations_pb2.ListLocationsResponse:
         """Post-rpc interceptor for list_locations
 
         Override in a subclass to manipulate the response
@@ -861,7 +1108,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_get_iam_policy(self, request: iam_policy_pb2.GetIamPolicyRequest, metadata: Sequence[Tuple[str, str]]) -> policy_pb2.Policy:
+
+    def pre_get_iam_policy(
+        self,
+        request: iam_policy_pb2.GetIamPolicyRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> policy_pb2.Policy:
         """Pre-rpc interceptor for get_iam_policy
 
         Override in a subclass to manipulate the request or metadata
@@ -869,7 +1121,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_iam_policy(self, response: iam_policy_pb2.GetIamPolicyRequest) -> policy_pb2.Policy:
+    def post_get_iam_policy(
+        self, response: iam_policy_pb2.GetIamPolicyRequest
+    ) -> policy_pb2.Policy:
         """Post-rpc interceptor for get_iam_policy
 
         Override in a subclass to manipulate the response
@@ -877,7 +1131,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_set_iam_policy(self, request: iam_policy_pb2.SetIamPolicyRequest, metadata: Sequence[Tuple[str, str]]) -> policy_pb2.Policy:
+
+    def pre_set_iam_policy(
+        self,
+        request: iam_policy_pb2.SetIamPolicyRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> policy_pb2.Policy:
         """Pre-rpc interceptor for set_iam_policy
 
         Override in a subclass to manipulate the request or metadata
@@ -885,7 +1144,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_set_iam_policy(self, response: iam_policy_pb2.SetIamPolicyRequest) -> policy_pb2.Policy:
+    def post_set_iam_policy(
+        self, response: iam_policy_pb2.SetIamPolicyRequest
+    ) -> policy_pb2.Policy:
         """Post-rpc interceptor for set_iam_policy
 
         Override in a subclass to manipulate the response
@@ -893,7 +1154,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_test_iam_permissions(self, request: iam_policy_pb2.TestIamPermissionsRequest, metadata: Sequence[Tuple[str, str]]) -> iam_policy_pb2.TestIamPermissionsResponse:
+
+    def pre_test_iam_permissions(
+        self,
+        request: iam_policy_pb2.TestIamPermissionsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> iam_policy_pb2.TestIamPermissionsResponse:
         """Pre-rpc interceptor for test_iam_permissions
 
         Override in a subclass to manipulate the request or metadata
@@ -901,7 +1167,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_test_iam_permissions(self, response: iam_policy_pb2.TestIamPermissionsRequest) -> iam_policy_pb2.TestIamPermissionsResponse:
+    def post_test_iam_permissions(
+        self, response: iam_policy_pb2.TestIamPermissionsRequest
+    ) -> iam_policy_pb2.TestIamPermissionsResponse:
         """Post-rpc interceptor for test_iam_permissions
 
         Override in a subclass to manipulate the response
@@ -909,7 +1177,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_cancel_operation(self, request: operations_pb2.CancelOperationRequest, metadata: Sequence[Tuple[str, str]]) -> None:
+
+    def pre_cancel_operation(
+        self,
+        request: operations_pb2.CancelOperationRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> None:
         """Pre-rpc interceptor for cancel_operation
 
         Override in a subclass to manipulate the request or metadata
@@ -917,7 +1190,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_cancel_operation(self, response: operations_pb2.CancelOperationRequest) -> None:
+    def post_cancel_operation(
+        self, response: operations_pb2.CancelOperationRequest
+    ) -> None:
         """Post-rpc interceptor for cancel_operation
 
         Override in a subclass to manipulate the response
@@ -925,7 +1200,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_delete_operation(self, request: operations_pb2.DeleteOperationRequest, metadata: Sequence[Tuple[str, str]]) -> None:
+
+    def pre_delete_operation(
+        self,
+        request: operations_pb2.DeleteOperationRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> None:
         """Pre-rpc interceptor for delete_operation
 
         Override in a subclass to manipulate the request or metadata
@@ -933,7 +1213,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_delete_operation(self, response: operations_pb2.DeleteOperationRequest) -> None:
+    def post_delete_operation(
+        self, response: operations_pb2.DeleteOperationRequest
+    ) -> None:
         """Post-rpc interceptor for delete_operation
 
         Override in a subclass to manipulate the response
@@ -941,7 +1223,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_get_operation(self, request: operations_pb2.GetOperationRequest, metadata: Sequence[Tuple[str, str]]) -> operations_pb2.Operation:
+
+    def pre_get_operation(
+        self,
+        request: operations_pb2.GetOperationRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> operations_pb2.Operation:
         """Pre-rpc interceptor for get_operation
 
         Override in a subclass to manipulate the request or metadata
@@ -949,7 +1236,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_get_operation(self, response: operations_pb2.GetOperationRequest) -> operations_pb2.Operation:
+    def post_get_operation(
+        self, response: operations_pb2.GetOperationRequest
+    ) -> operations_pb2.Operation:
         """Post-rpc interceptor for get_operation
 
         Override in a subclass to manipulate the response
@@ -957,7 +1246,12 @@ class RegistryRestInterceptor:
         it is returned to user code.
         """
         return response
-    def pre_list_operations(self, request: operations_pb2.ListOperationsRequest, metadata: Sequence[Tuple[str, str]]) -> operations_pb2.ListOperationsResponse:
+
+    def pre_list_operations(
+        self,
+        request: operations_pb2.ListOperationsRequest,
+        metadata: Sequence[Tuple[str, str]],
+    ) -> operations_pb2.ListOperationsResponse:
         """Pre-rpc interceptor for list_operations
 
         Override in a subclass to manipulate the request or metadata
@@ -965,7 +1259,9 @@ class RegistryRestInterceptor:
         """
         return request, metadata
 
-    def post_list_operations(self, response: operations_pb2.ListOperationsRequest) -> operations_pb2.ListOperationsResponse:
+    def post_list_operations(
+        self, response: operations_pb2.ListOperationsRequest
+    ) -> operations_pb2.ListOperationsResponse:
         """Post-rpc interceptor for list_operations
 
         Override in a subclass to manipulate the response
@@ -999,55 +1295,56 @@ class RegistryRestTransport(RegistryTransport):
     library's source repository. Thank you!
     """
 
-    def __init__(self, *,
-            host: str = 'apigeeregistry.googleapis.com',
-            credentials: ga_credentials.Credentials=None,
-            credentials_file: str=None,
-            scopes: Sequence[str]=None,
-            client_cert_source_for_mtls: Callable[[
-                ], Tuple[bytes, bytes]]=None,
-            quota_project_id: Optional[str]=None,
-            client_info: gapic_v1.client_info.ClientInfo=DEFAULT_CLIENT_INFO,
-            always_use_jwt_access: Optional[bool]=False,
-            url_scheme: str='https',
-            interceptor: Optional[RegistryRestInterceptor] = None,
-            api_audience: Optional[str] = None,
-            ) -> None:
+    def __init__(
+        self,
+        *,
+        host: str = "apigeeregistry.googleapis.com",
+        credentials: ga_credentials.Credentials = None,
+        credentials_file: str = None,
+        scopes: Sequence[str] = None,
+        client_cert_source_for_mtls: Callable[[], Tuple[bytes, bytes]] = None,
+        quota_project_id: Optional[str] = None,
+        client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
+        always_use_jwt_access: Optional[bool] = False,
+        url_scheme: str = "https",
+        interceptor: Optional[RegistryRestInterceptor] = None,
+        api_audience: Optional[str] = None,
+    ) -> None:
         """Instantiate the transport.
 
-       NOTE: This REST transport functionality is currently in a beta
-       state (preview). We welcome your feedback via a GitHub issue in
-       this library's repository. Thank you!
+        NOTE: This REST transport functionality is currently in a beta
+        state (preview). We welcome your feedback via a GitHub issue in
+        this library's repository. Thank you!
 
-        Args:
-            host (Optional[str]):
-                 The hostname to connect to.
-            credentials (Optional[google.auth.credentials.Credentials]): The
-                authorization credentials to attach to requests. These
-                credentials identify the application to the service; if none
-                are specified, the client will attempt to ascertain the
-                credentials from the environment.
+         Args:
+             host (Optional[str]):
+                  The hostname to connect to.
+             credentials (Optional[google.auth.credentials.Credentials]): The
+                 authorization credentials to attach to requests. These
+                 credentials identify the application to the service; if none
+                 are specified, the client will attempt to ascertain the
+                 credentials from the environment.
 
-            credentials_file (Optional[str]): A file with credentials that can
-                be loaded with :func:`google.auth.load_credentials_from_file`.
-                This argument is ignored if ``channel`` is provided.
-            scopes (Optional(Sequence[str])): A list of scopes. This argument is
-                ignored if ``channel`` is provided.
-            client_cert_source_for_mtls (Callable[[], Tuple[bytes, bytes]]): Client
-                certificate to configure mutual TLS HTTP channel. It is ignored
-                if ``channel`` is provided.
-            quota_project_id (Optional[str]): An optional project to use for billing
-                and quota.
-            client_info (google.api_core.gapic_v1.client_info.ClientInfo):
-                The client info used to send a user-agent string along with
-                API requests. If ``None``, then default info will be used.
-                Generally, you only need to set this if you are developing
-                your own client library.
-            always_use_jwt_access (Optional[bool]): Whether self signed JWT should
-                be used for service account credentials.
-            url_scheme: the protocol scheme for the API endpoint.  Normally
-                "https", but for testing or local servers,
-                "http" can be specified.
+             credentials_file (Optional[str]): A file with credentials that can
+                 be loaded with :func:`google.auth.load_credentials_from_file`.
+                 This argument is ignored if ``channel`` is provided.
+             scopes (Optional(Sequence[str])): A list of scopes. This argument is
+                 ignored if ``channel`` is provided.
+             client_cert_source_for_mtls (Callable[[], Tuple[bytes, bytes]]): Client
+                 certificate to configure mutual TLS HTTP channel. It is ignored
+                 if ``channel`` is provided.
+             quota_project_id (Optional[str]): An optional project to use for billing
+                 and quota.
+             client_info (google.api_core.gapic_v1.client_info.ClientInfo):
+                 The client info used to send a user-agent string along with
+                 API requests. If ``None``, then default info will be used.
+                 Generally, you only need to set this if you are developing
+                 your own client library.
+             always_use_jwt_access (Optional[bool]): Whether self signed JWT should
+                 be used for service account credentials.
+             url_scheme: the protocol scheme for the API endpoint.  Normally
+                 "https", but for testing or local servers,
+                 "http" can be specified.
         """
         # Run the base constructor
         # TODO(yon-mg): resolve other ctor params i.e. scopes, quota, etc.
@@ -1055,7 +1352,9 @@ class RegistryRestTransport(RegistryTransport):
         # credentials object
         maybe_url_match = re.match("^(?P<scheme>http(?:s)?://)?(?P<host>.*)$", host)
         if maybe_url_match is None:
-            raise ValueError(f"Unexpected hostname structure: {host}")  # pragma: NO COVER
+            raise ValueError(
+                f"Unexpected hostname structure: {host}"
+            )  # pragma: NO COVER
 
         url_match_items = maybe_url_match.groupdict()
 
@@ -1066,10 +1365,11 @@ class RegistryRestTransport(RegistryTransport):
             credentials=credentials,
             client_info=client_info,
             always_use_jwt_access=always_use_jwt_access,
-            api_audience=api_audience
+            api_audience=api_audience,
         )
         self._session = AuthorizedSession(
-            self._credentials, default_host=self.DEFAULT_HOST)
+            self._credentials, default_host=self.DEFAULT_HOST
+        )
         if client_cert_source_for_mtls:
             self._session.configure_mtls_channel(client_cert_source_for_mtls)
         self._interceptor = interceptor or RegistryRestInterceptor()
@@ -1079,19 +1379,26 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("CreateApi")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-            "apiId" : "",        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {
+            "apiId": "",
+        }
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.CreateApiRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.Api:
+        def __call__(
+            self,
+            request: registry_service.CreateApiRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.Api:
             r"""Call the create api method over HTTP.
 
             Args:
@@ -1111,11 +1418,12 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*}/apis',
-                'body': 'api',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*}/apis",
+                    "body": "api",
+                },
             ]
             request, metadata = self._interceptor.pre_create_api(request, metadata)
             pb_request = registry_service.CreateApiRequest.pb(request)
@@ -1124,31 +1432,33 @@ class RegistryRestTransport(RegistryTransport):
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1167,19 +1477,26 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("CreateApiDeployment")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-            "apiDeploymentId" : "",        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {
+            "apiDeploymentId": "",
+        }
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.CreateApiDeploymentRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiDeployment:
+        def __call__(
+            self,
+            request: registry_service.CreateApiDeploymentRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiDeployment:
             r"""Call the create api deployment method over HTTP.
 
             Args:
@@ -1207,44 +1524,49 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*}/deployments',
-                'body': 'api_deployment',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*}/deployments",
+                    "body": "api_deployment",
+                },
             ]
-            request, metadata = self._interceptor.pre_create_api_deployment(request, metadata)
+            request, metadata = self._interceptor.pre_create_api_deployment(
+                request, metadata
+            )
             pb_request = registry_service.CreateApiDeploymentRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1263,19 +1585,26 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("CreateApiSpec")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-            "apiSpecId" : "",        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {
+            "apiSpecId": "",
+        }
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.CreateApiSpecRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiSpec:
+        def __call__(
+            self,
+            request: registry_service.CreateApiSpecRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiSpec:
             r"""Call the create api spec method over HTTP.
 
             Args:
@@ -1306,11 +1635,12 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*/versions/*}/specs',
-                'body': 'api_spec',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*/versions/*}/specs",
+                    "body": "api_spec",
+                },
             ]
             request, metadata = self._interceptor.pre_create_api_spec(request, metadata)
             pb_request = registry_service.CreateApiSpecRequest.pb(request)
@@ -1319,31 +1649,33 @@ class RegistryRestTransport(RegistryTransport):
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1362,19 +1694,26 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("CreateApiVersion")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-            "apiVersionId" : "",        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {
+            "apiVersionId": "",
+        }
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.CreateApiVersionRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiVersion:
+        def __call__(
+            self,
+            request: registry_service.CreateApiVersionRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiVersion:
             r"""Call the create api version method over HTTP.
 
             Args:
@@ -1394,44 +1733,49 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*}/versions',
-                'body': 'api_version',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*}/versions",
+                    "body": "api_version",
+                },
             ]
-            request, metadata = self._interceptor.pre_create_api_version(request, metadata)
+            request, metadata = self._interceptor.pre_create_api_version(
+                request, metadata
+            )
             pb_request = registry_service.CreateApiVersionRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1450,19 +1794,26 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("CreateArtifact")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-            "artifactId" : "",        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {
+            "artifactId": "",
+        }
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.CreateArtifactRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.Artifact:
+        def __call__(
+            self,
+            request: registry_service.CreateArtifactRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.Artifact:
             r"""Call the create artifact method over HTTP.
 
             Args:
@@ -1490,31 +1841,32 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*}/artifacts',
-                'body': 'artifact',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*}/artifacts',
-                'body': 'artifact',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*/versions/*}/artifacts',
-                'body': 'artifact',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*/versions/*/specs/*}/artifacts',
-                'body': 'artifact',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*/deployments/*}/artifacts',
-                'body': 'artifact',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*}/artifacts",
+                    "body": "artifact",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*}/artifacts",
+                    "body": "artifact",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*/versions/*}/artifacts",
+                    "body": "artifact",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*/versions/*/specs/*}/artifacts",
+                    "body": "artifact",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*/deployments/*}/artifacts",
+                    "body": "artifact",
+                },
             ]
             request, metadata = self._interceptor.pre_create_artifact(request, metadata)
             pb_request = registry_service.CreateArtifactRequest.pb(request)
@@ -1523,31 +1875,33 @@ class RegistryRestTransport(RegistryTransport):
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1566,19 +1920,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("DeleteApi")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.DeleteApiRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ):
+        def __call__(
+            self,
+            request: registry_service.DeleteApiRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ):
             r"""Call the delete api method over HTTP.
 
             Args:
@@ -1591,35 +1950,38 @@ class RegistryRestTransport(RegistryTransport):
                     sent along with the request as metadata.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*}",
+                },
             ]
             request, metadata = self._interceptor.pre_delete_api(request, metadata)
             pb_request = registry_service.DeleteApiRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1630,19 +1992,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("DeleteApiDeployment")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.DeleteApiDeploymentRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ):
+        def __call__(
+            self,
+            request: registry_service.DeleteApiDeploymentRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ):
             r"""Call the delete api deployment method over HTTP.
 
             Args:
@@ -1657,35 +2024,40 @@ class RegistryRestTransport(RegistryTransport):
                     sent along with the request as metadata.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*}",
+                },
             ]
-            request, metadata = self._interceptor.pre_delete_api_deployment(request, metadata)
+            request, metadata = self._interceptor.pre_delete_api_deployment(
+                request, metadata
+            )
             pb_request = registry_service.DeleteApiDeploymentRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1696,76 +2068,86 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("DeleteApiDeploymentRevision")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.DeleteApiDeploymentRevisionRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiDeployment:
+        def __call__(
+            self,
+            request: registry_service.DeleteApiDeploymentRevisionRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiDeployment:
             r"""Call the delete api deployment
-        revision method over HTTP.
+            revision method over HTTP.
 
-            Args:
-                request (~.registry_service.DeleteApiDeploymentRevisionRequest):
-                    The request object. Request message for
-                DeleteApiDeploymentRevision.
+                Args:
+                    request (~.registry_service.DeleteApiDeploymentRevisionRequest):
+                        The request object. Request message for
+                    DeleteApiDeploymentRevision.
 
-                retry (google.api_core.retry.Retry): Designation of what errors, if any,
-                    should be retried.
-                timeout (float): The timeout for this request.
-                metadata (Sequence[Tuple[str, str]]): Strings which should be
-                    sent along with the request as metadata.
+                    retry (google.api_core.retry.Retry): Designation of what errors, if any,
+                        should be retried.
+                    timeout (float): The timeout for this request.
+                    metadata (Sequence[Tuple[str, str]]): Strings which should be
+                        sent along with the request as metadata.
 
-            Returns:
-                ~.registry_models.ApiDeployment:
-                    Describes a service running at
-                particular address that provides a
-                particular version of an API.
-                ApiDeployments have revisions which
-                correspond to different configurations
-                of a single deployment in time. Revision
-                identifiers should be updated whenever
-                the served API spec or endpoint address
-                changes.
+                Returns:
+                    ~.registry_models.ApiDeployment:
+                        Describes a service running at
+                    particular address that provides a
+                    particular version of an API.
+                    ApiDeployments have revisions which
+                    correspond to different configurations
+                    of a single deployment in time. Revision
+                    identifiers should be updated whenever
+                    the served API spec or endpoint address
+                    changes.
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*}:deleteRevision',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*}:deleteRevision",
+                },
             ]
-            request, metadata = self._interceptor.pre_delete_api_deployment_revision(request, metadata)
+            request, metadata = self._interceptor.pre_delete_api_deployment_revision(
+                request, metadata
+            )
             pb_request = registry_service.DeleteApiDeploymentRevisionRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1784,19 +2166,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("DeleteApiSpec")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.DeleteApiSpecRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ):
+        def __call__(
+            self,
+            request: registry_service.DeleteApiSpecRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ):
             r"""Call the delete api spec method over HTTP.
 
             Args:
@@ -1809,35 +2196,38 @@ class RegistryRestTransport(RegistryTransport):
                     sent along with the request as metadata.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}",
+                },
             ]
             request, metadata = self._interceptor.pre_delete_api_spec(request, metadata)
             pb_request = registry_service.DeleteApiSpecRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1848,19 +2238,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("DeleteApiSpecRevision")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.DeleteApiSpecRevisionRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiSpec:
+        def __call__(
+            self,
+            request: registry_service.DeleteApiSpecRevisionRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiSpec:
             r"""Call the delete api spec revision method over HTTP.
 
             Args:
@@ -1893,35 +2288,40 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:deleteRevision',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:deleteRevision",
+                },
             ]
-            request, metadata = self._interceptor.pre_delete_api_spec_revision(request, metadata)
+            request, metadata = self._interceptor.pre_delete_api_spec_revision(
+                request, metadata
+            )
             pb_request = registry_service.DeleteApiSpecRevisionRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -1940,19 +2340,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("DeleteApiVersion")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.DeleteApiVersionRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ):
+        def __call__(
+            self,
+            request: registry_service.DeleteApiVersionRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ):
             r"""Call the delete api version method over HTTP.
 
             Args:
@@ -1965,35 +2370,40 @@ class RegistryRestTransport(RegistryTransport):
                     sent along with the request as metadata.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*}",
+                },
             ]
-            request, metadata = self._interceptor.pre_delete_api_version(request, metadata)
+            request, metadata = self._interceptor.pre_delete_api_version(
+                request, metadata
+            )
             pb_request = registry_service.DeleteApiVersionRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2004,19 +2414,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("DeleteArtifact")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.DeleteArtifactRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ):
+        def __call__(
+            self,
+            request: registry_service.DeleteArtifactRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ):
             r"""Call the delete artifact method over HTTP.
 
             Args:
@@ -2029,51 +2444,54 @@ class RegistryRestTransport(RegistryTransport):
                     sent along with the request as metadata.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/artifacts/*}',
-            },
-{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/artifacts/*}',
-            },
-{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/artifacts/*}',
-            },
-{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}',
-            },
-{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*/artifacts/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/artifacts/*}",
+                },
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/artifacts/*}",
+                },
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/artifacts/*}",
+                },
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}",
+                },
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*/artifacts/*}",
+                },
             ]
             request, metadata = self._interceptor.pre_delete_artifact(request, metadata)
             pb_request = registry_service.DeleteArtifactRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2084,19 +2502,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("GetApi")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.GetApiRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.Api:
+        def __call__(
+            self,
+            request: registry_service.GetApiRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.Api:
             r"""Call the get api method over HTTP.
 
             Args:
@@ -2116,35 +2539,38 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*}",
+                },
             ]
             request, metadata = self._interceptor.pre_get_api(request, metadata)
             pb_request = registry_service.GetApiRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2163,19 +2589,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("GetApiDeployment")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.GetApiDeploymentRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiDeployment:
+        def __call__(
+            self,
+            request: registry_service.GetApiDeploymentRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiDeployment:
             r"""Call the get api deployment method over HTTP.
 
             Args:
@@ -2201,35 +2632,40 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*}",
+                },
             ]
-            request, metadata = self._interceptor.pre_get_api_deployment(request, metadata)
+            request, metadata = self._interceptor.pre_get_api_deployment(
+                request, metadata
+            )
             pb_request = registry_service.GetApiDeploymentRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2248,19 +2684,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("GetApiSpec")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.GetApiSpecRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiSpec:
+        def __call__(
+            self,
+            request: registry_service.GetApiSpecRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiSpec:
             r"""Call the get api spec method over HTTP.
 
             Args:
@@ -2291,35 +2732,38 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}",
+                },
             ]
             request, metadata = self._interceptor.pre_get_api_spec(request, metadata)
             pb_request = registry_service.GetApiSpecRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2338,19 +2782,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("GetApiSpecContents")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.GetApiSpecContentsRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> httpbody_pb2.HttpBody:
+        def __call__(
+            self,
+            request: registry_service.GetApiSpecContentsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> httpbody_pb2.HttpBody:
             r"""Call the get api spec contents method over HTTP.
 
             Args:
@@ -2418,35 +2867,40 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:getContents',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:getContents",
+                },
             ]
-            request, metadata = self._interceptor.pre_get_api_spec_contents(request, metadata)
+            request, metadata = self._interceptor.pre_get_api_spec_contents(
+                request, metadata
+            )
             pb_request = registry_service.GetApiSpecContentsRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2465,19 +2919,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("GetApiVersion")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.GetApiVersionRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiVersion:
+        def __call__(
+            self,
+            request: registry_service.GetApiVersionRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiVersion:
             r"""Call the get api version method over HTTP.
 
             Args:
@@ -2497,35 +2956,38 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*}",
+                },
             ]
             request, metadata = self._interceptor.pre_get_api_version(request, metadata)
             pb_request = registry_service.GetApiVersionRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2544,19 +3006,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("GetArtifact")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.GetArtifactRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.Artifact:
+        def __call__(
+            self,
+            request: registry_service.GetArtifactRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.Artifact:
             r"""Call the get artifact method over HTTP.
 
             Args:
@@ -2584,51 +3051,54 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/artifacts/*}',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/artifacts/*}',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/artifacts/*}',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*/artifacts/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/artifacts/*}",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/artifacts/*}",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/artifacts/*}",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*/artifacts/*}",
+                },
             ]
             request, metadata = self._interceptor.pre_get_artifact(request, metadata)
             pb_request = registry_service.GetArtifactRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2647,19 +3117,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("GetArtifactContents")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.GetArtifactContentsRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> httpbody_pb2.HttpBody:
+        def __call__(
+            self,
+            request: registry_service.GetArtifactContentsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> httpbody_pb2.HttpBody:
             r"""Call the get artifact contents method over HTTP.
 
             Args:
@@ -2727,51 +3202,56 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/artifacts/*}:getContents',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/artifacts/*}:getContents',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/artifacts/*}:getContents',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}:getContents',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*/artifacts/*}:getContents',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/artifacts/*}:getContents",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/artifacts/*}:getContents",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/artifacts/*}:getContents",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}:getContents",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*/artifacts/*}:getContents",
+                },
             ]
-            request, metadata = self._interceptor.pre_get_artifact_contents(request, metadata)
+            request, metadata = self._interceptor.pre_get_artifact_contents(
+                request, metadata
+            )
             pb_request = registry_service.GetArtifactContentsRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2790,69 +3270,79 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("ListApiDeploymentRevisions")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.ListApiDeploymentRevisionsRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_service.ListApiDeploymentRevisionsResponse:
+        def __call__(
+            self,
+            request: registry_service.ListApiDeploymentRevisionsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_service.ListApiDeploymentRevisionsResponse:
             r"""Call the list api deployment
-        revisions method over HTTP.
+            revisions method over HTTP.
 
-            Args:
-                request (~.registry_service.ListApiDeploymentRevisionsRequest):
-                    The request object. Request message for
-                ListApiDeploymentRevisions.
+                Args:
+                    request (~.registry_service.ListApiDeploymentRevisionsRequest):
+                        The request object. Request message for
+                    ListApiDeploymentRevisions.
 
-                retry (google.api_core.retry.Retry): Designation of what errors, if any,
-                    should be retried.
-                timeout (float): The timeout for this request.
-                metadata (Sequence[Tuple[str, str]]): Strings which should be
-                    sent along with the request as metadata.
+                    retry (google.api_core.retry.Retry): Designation of what errors, if any,
+                        should be retried.
+                    timeout (float): The timeout for this request.
+                    metadata (Sequence[Tuple[str, str]]): Strings which should be
+                        sent along with the request as metadata.
 
-            Returns:
-                ~.registry_service.ListApiDeploymentRevisionsResponse:
-                    Response message for
-                ListApiDeploymentRevisionsResponse.
+                Returns:
+                    ~.registry_service.ListApiDeploymentRevisionsResponse:
+                        Response message for
+                    ListApiDeploymentRevisionsResponse.
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*}:listRevisions',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*}:listRevisions",
+                },
             ]
-            request, metadata = self._interceptor.pre_list_api_deployment_revisions(request, metadata)
+            request, metadata = self._interceptor.pre_list_api_deployment_revisions(
+                request, metadata
+            )
             pb_request = registry_service.ListApiDeploymentRevisionsRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2871,19 +3361,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("ListApiDeployments")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.ListApiDeploymentsRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_service.ListApiDeploymentsResponse:
+        def __call__(
+            self,
+            request: registry_service.ListApiDeploymentsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_service.ListApiDeploymentsResponse:
             r"""Call the list api deployments method over HTTP.
 
             Args:
@@ -2904,35 +3399,40 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*}/deployments',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*}/deployments",
+                },
             ]
-            request, metadata = self._interceptor.pre_list_api_deployments(request, metadata)
+            request, metadata = self._interceptor.pre_list_api_deployments(
+                request, metadata
+            )
             pb_request = registry_service.ListApiDeploymentsRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -2951,19 +3451,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("ListApis")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.ListApisRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_service.ListApisResponse:
+        def __call__(
+            self,
+            request: registry_service.ListApisRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_service.ListApisResponse:
             r"""Call the list apis method over HTTP.
 
             Args:
@@ -2980,35 +3485,38 @@ class RegistryRestTransport(RegistryTransport):
                     Response message for ListApis.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*}/apis',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*}/apis",
+                },
             ]
             request, metadata = self._interceptor.pre_list_apis(request, metadata)
             pb_request = registry_service.ListApisRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3027,19 +3535,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("ListApiSpecRevisions")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.ListApiSpecRevisionsRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_service.ListApiSpecRevisionsResponse:
+        def __call__(
+            self,
+            request: registry_service.ListApiSpecRevisionsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_service.ListApiSpecRevisionsResponse:
             r"""Call the list api spec revisions method over HTTP.
 
             Args:
@@ -3060,35 +3573,40 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:listRevisions',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:listRevisions",
+                },
             ]
-            request, metadata = self._interceptor.pre_list_api_spec_revisions(request, metadata)
+            request, metadata = self._interceptor.pre_list_api_spec_revisions(
+                request, metadata
+            )
             pb_request = registry_service.ListApiSpecRevisionsRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3107,19 +3625,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("ListApiSpecs")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.ListApiSpecsRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_service.ListApiSpecsResponse:
+        def __call__(
+            self,
+            request: registry_service.ListApiSpecsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_service.ListApiSpecsResponse:
             r"""Call the list api specs method over HTTP.
 
             Args:
@@ -3136,35 +3659,38 @@ class RegistryRestTransport(RegistryTransport):
                     Response message for ListApiSpecs.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*/versions/*}/specs',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*/versions/*}/specs",
+                },
             ]
             request, metadata = self._interceptor.pre_list_api_specs(request, metadata)
             pb_request = registry_service.ListApiSpecsRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3183,19 +3709,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("ListApiVersions")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.ListApiVersionsRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_service.ListApiVersionsResponse:
+        def __call__(
+            self,
+            request: registry_service.ListApiVersionsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_service.ListApiVersionsResponse:
             r"""Call the list api versions method over HTTP.
 
             Args:
@@ -3212,35 +3743,40 @@ class RegistryRestTransport(RegistryTransport):
                     Response message for ListApiVersions.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*}/versions',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*}/versions",
+                },
             ]
-            request, metadata = self._interceptor.pre_list_api_versions(request, metadata)
+            request, metadata = self._interceptor.pre_list_api_versions(
+                request, metadata
+            )
             pb_request = registry_service.ListApiVersionsRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3259,19 +3795,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("ListArtifacts")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.ListArtifactsRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_service.ListArtifactsResponse:
+        def __call__(
+            self,
+            request: registry_service.ListArtifactsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_service.ListArtifactsResponse:
             r"""Call the list artifacts method over HTTP.
 
             Args:
@@ -3288,51 +3829,54 @@ class RegistryRestTransport(RegistryTransport):
                     Response message for ListArtifacts.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*}/artifacts',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*}/artifacts',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*/versions/*}/artifacts',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*/versions/*/specs/*}/artifacts',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{parent=projects/*/locations/*/apis/*/deployments/*}/artifacts',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*}/artifacts",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*}/artifacts",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*/versions/*}/artifacts",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*/versions/*/specs/*}/artifacts",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{parent=projects/*/locations/*/apis/*/deployments/*}/artifacts",
+                },
             ]
             request, metadata = self._interceptor.pre_list_artifacts(request, metadata)
             pb_request = registry_service.ListArtifactsRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False,
-            ))
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3351,19 +3895,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("ReplaceArtifact")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.ReplaceArtifactRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.Artifact:
+        def __call__(
+            self,
+            request: registry_service.ReplaceArtifactRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.Artifact:
             r"""Call the replace artifact method over HTTP.
 
             Args:
@@ -3391,64 +3940,69 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'put',
-                'uri': '/v1/{artifact.name=projects/*/locations/*/artifacts/*}',
-                'body': 'artifact',
-            },
-{
-                'method': 'put',
-                'uri': '/v1/{artifact.name=projects/*/locations/*/apis/*/artifacts/*}',
-                'body': 'artifact',
-            },
-{
-                'method': 'put',
-                'uri': '/v1/{artifact.name=projects/*/locations/*/apis/*/versions/*/artifacts/*}',
-                'body': 'artifact',
-            },
-{
-                'method': 'put',
-                'uri': '/v1/{artifact.name=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}',
-                'body': 'artifact',
-            },
-{
-                'method': 'put',
-                'uri': '/v1/{artifact.name=projects/*/locations/*/apis/*/deployments/*/artifacts/*}',
-                'body': 'artifact',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "put",
+                    "uri": "/v1/{artifact.name=projects/*/locations/*/artifacts/*}",
+                    "body": "artifact",
+                },
+                {
+                    "method": "put",
+                    "uri": "/v1/{artifact.name=projects/*/locations/*/apis/*/artifacts/*}",
+                    "body": "artifact",
+                },
+                {
+                    "method": "put",
+                    "uri": "/v1/{artifact.name=projects/*/locations/*/apis/*/versions/*/artifacts/*}",
+                    "body": "artifact",
+                },
+                {
+                    "method": "put",
+                    "uri": "/v1/{artifact.name=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}",
+                    "body": "artifact",
+                },
+                {
+                    "method": "put",
+                    "uri": "/v1/{artifact.name=projects/*/locations/*/apis/*/deployments/*/artifacts/*}",
+                    "body": "artifact",
+                },
             ]
-            request, metadata = self._interceptor.pre_replace_artifact(request, metadata)
+            request, metadata = self._interceptor.pre_replace_artifact(
+                request, metadata
+            )
             pb_request = registry_service.ReplaceArtifactRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3467,19 +4021,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("RollbackApiDeployment")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.RollbackApiDeploymentRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiDeployment:
+        def __call__(
+            self,
+            request: registry_service.RollbackApiDeploymentRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiDeployment:
             r"""Call the rollback api deployment method over HTTP.
 
             Args:
@@ -3507,44 +4066,49 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*}:rollback',
-                'body': '*',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*}:rollback",
+                    "body": "*",
+                },
             ]
-            request, metadata = self._interceptor.pre_rollback_api_deployment(request, metadata)
+            request, metadata = self._interceptor.pre_rollback_api_deployment(
+                request, metadata
+            )
             pb_request = registry_service.RollbackApiDeploymentRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3563,19 +4127,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("RollbackApiSpec")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.RollbackApiSpecRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiSpec:
+        def __call__(
+            self,
+            request: registry_service.RollbackApiSpecRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiSpec:
             r"""Call the rollback api spec method over HTTP.
 
             Args:
@@ -3606,44 +4175,49 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:rollback',
-                'body': '*',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:rollback",
+                    "body": "*",
+                },
             ]
-            request, metadata = self._interceptor.pre_rollback_api_spec(request, metadata)
+            request, metadata = self._interceptor.pre_rollback_api_spec(
+                request, metadata
+            )
             pb_request = registry_service.RollbackApiSpecRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3662,85 +4236,95 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("TagApiDeploymentRevision")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.TagApiDeploymentRevisionRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiDeployment:
+        def __call__(
+            self,
+            request: registry_service.TagApiDeploymentRevisionRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiDeployment:
             r"""Call the tag api deployment
-        revision method over HTTP.
+            revision method over HTTP.
 
-            Args:
-                request (~.registry_service.TagApiDeploymentRevisionRequest):
-                    The request object. Request message for
-                TagApiDeploymentRevision.
+                Args:
+                    request (~.registry_service.TagApiDeploymentRevisionRequest):
+                        The request object. Request message for
+                    TagApiDeploymentRevision.
 
-                retry (google.api_core.retry.Retry): Designation of what errors, if any,
-                    should be retried.
-                timeout (float): The timeout for this request.
-                metadata (Sequence[Tuple[str, str]]): Strings which should be
-                    sent along with the request as metadata.
+                    retry (google.api_core.retry.Retry): Designation of what errors, if any,
+                        should be retried.
+                    timeout (float): The timeout for this request.
+                    metadata (Sequence[Tuple[str, str]]): Strings which should be
+                        sent along with the request as metadata.
 
-            Returns:
-                ~.registry_models.ApiDeployment:
-                    Describes a service running at
-                particular address that provides a
-                particular version of an API.
-                ApiDeployments have revisions which
-                correspond to different configurations
-                of a single deployment in time. Revision
-                identifiers should be updated whenever
-                the served API spec or endpoint address
-                changes.
+                Returns:
+                    ~.registry_models.ApiDeployment:
+                        Describes a service running at
+                    particular address that provides a
+                    particular version of an API.
+                    ApiDeployments have revisions which
+                    correspond to different configurations
+                    of a single deployment in time. Revision
+                    identifiers should be updated whenever
+                    the served API spec or endpoint address
+                    changes.
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/deployments/*}:tagRevision',
-                'body': '*',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/deployments/*}:tagRevision",
+                    "body": "*",
+                },
             ]
-            request, metadata = self._interceptor.pre_tag_api_deployment_revision(request, metadata)
+            request, metadata = self._interceptor.pre_tag_api_deployment_revision(
+                request, metadata
+            )
             pb_request = registry_service.TagApiDeploymentRevisionRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3759,19 +4343,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("TagApiSpecRevision")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.TagApiSpecRevisionRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiSpec:
+        def __call__(
+            self,
+            request: registry_service.TagApiSpecRevisionRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiSpec:
             r"""Call the tag api spec revision method over HTTP.
 
             Args:
@@ -3804,44 +4393,49 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:tagRevision',
-                'body': '*',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{name=projects/*/locations/*/apis/*/versions/*/specs/*}:tagRevision",
+                    "body": "*",
+                },
             ]
-            request, metadata = self._interceptor.pre_tag_api_spec_revision(request, metadata)
+            request, metadata = self._interceptor.pre_tag_api_spec_revision(
+                request, metadata
+            )
             pb_request = registry_service.TagApiSpecRevisionRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3860,19 +4454,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("UpdateApi")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.UpdateApiRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.Api:
+        def __call__(
+            self,
+            request: registry_service.UpdateApiRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.Api:
             r"""Call the update api method over HTTP.
 
             Args:
@@ -3892,11 +4491,12 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'patch',
-                'uri': '/v1/{api.name=projects/*/locations/*/apis/*}',
-                'body': 'api',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "patch",
+                    "uri": "/v1/{api.name=projects/*/locations/*/apis/*}",
+                    "body": "api",
+                },
             ]
             request, metadata = self._interceptor.pre_update_api(request, metadata)
             pb_request = registry_service.UpdateApiRequest.pb(request)
@@ -3905,31 +4505,33 @@ class RegistryRestTransport(RegistryTransport):
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -3948,19 +4550,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("UpdateApiDeployment")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.UpdateApiDeploymentRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiDeployment:
+        def __call__(
+            self,
+            request: registry_service.UpdateApiDeploymentRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiDeployment:
             r"""Call the update api deployment method over HTTP.
 
             Args:
@@ -3988,44 +4595,49 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'patch',
-                'uri': '/v1/{api_deployment.name=projects/*/locations/*/apis/*/deployments/*}',
-                'body': 'api_deployment',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "patch",
+                    "uri": "/v1/{api_deployment.name=projects/*/locations/*/apis/*/deployments/*}",
+                    "body": "api_deployment",
+                },
             ]
-            request, metadata = self._interceptor.pre_update_api_deployment(request, metadata)
+            request, metadata = self._interceptor.pre_update_api_deployment(
+                request, metadata
+            )
             pb_request = registry_service.UpdateApiDeploymentRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -4044,19 +4656,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("UpdateApiSpec")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.UpdateApiSpecRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiSpec:
+        def __call__(
+            self,
+            request: registry_service.UpdateApiSpecRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiSpec:
             r"""Call the update api spec method over HTTP.
 
             Args:
@@ -4087,11 +4704,12 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'patch',
-                'uri': '/v1/{api_spec.name=projects/*/locations/*/apis/*/versions/*/specs/*}',
-                'body': 'api_spec',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "patch",
+                    "uri": "/v1/{api_spec.name=projects/*/locations/*/apis/*/versions/*/specs/*}",
+                    "body": "api_spec",
+                },
             ]
             request, metadata = self._interceptor.pre_update_api_spec(request, metadata)
             pb_request = registry_service.UpdateApiSpecRequest.pb(request)
@@ -4100,31 +4718,33 @@ class RegistryRestTransport(RegistryTransport):
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -4143,19 +4763,24 @@ class RegistryRestTransport(RegistryTransport):
         def __hash__(self):
             return hash("UpdateApiVersion")
 
-        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] =  {
-        }
+        __REQUIRED_FIELDS_DEFAULT_VALUES: Dict[str, str] = {}
 
         @classmethod
         def _get_unset_required_fields(cls, message_dict):
-            return {k: v for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items() if k not in message_dict}
+            return {
+                k: v
+                for k, v in cls.__REQUIRED_FIELDS_DEFAULT_VALUES.items()
+                if k not in message_dict
+            }
 
-        def __call__(self,
-                request: registry_service.UpdateApiVersionRequest, *,
-                retry: OptionalRetry=gapic_v1.method.DEFAULT,
-                timeout: float=None,
-                metadata: Sequence[Tuple[str, str]]=(),
-                ) -> registry_models.ApiVersion:
+        def __call__(
+            self,
+            request: registry_service.UpdateApiVersionRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> registry_models.ApiVersion:
             r"""Call the update api version method over HTTP.
 
             Args:
@@ -4175,44 +4800,49 @@ class RegistryRestTransport(RegistryTransport):
 
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'patch',
-                'uri': '/v1/{api_version.name=projects/*/locations/*/apis/*/versions/*}',
-                'body': 'api_version',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "patch",
+                    "uri": "/v1/{api_version.name=projects/*/locations/*/apis/*/versions/*}",
+                    "body": "api_version",
+                },
             ]
-            request, metadata = self._interceptor.pre_update_api_version(request, metadata)
+            request, metadata = self._interceptor.pre_update_api_version(
+                request, metadata
+            )
             pb_request = registry_service.UpdateApiVersionRequest.pb(request)
             transcoded_request = path_template.transcode(http_options, pb_request)
 
             # Jsonify the request body
 
             body = json_format.MessageToJson(
-                transcoded_request['body'],
-                including_default_value_fields=False,
-                use_integers_for_enums=False
-            )
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
-
-            # Jsonify the query params
-            query_params = json.loads(json_format.MessageToJson(
-                transcoded_request['query_params'],
+                transcoded_request["body"],
                 including_default_value_fields=False,
                 use_integers_for_enums=False,
-            ))
+            )
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
+
+            # Jsonify the query params
+            query_params = json.loads(
+                json_format.MessageToJson(
+                    transcoded_request["query_params"],
+                    including_default_value_fields=False,
+                    use_integers_for_enums=False,
+                )
+            )
             query_params.update(self._get_unset_required_fields(query_params))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
                 timeout=timeout,
                 headers=headers,
                 params=rest_helpers.flatten_query_params(query_params, strict=True),
                 data=body,
-                )
+            )
 
             # In case of error, raise the appropriate core_exceptions.GoogleAPICallError exception
             # subclass.
@@ -4228,296 +4858,338 @@ class RegistryRestTransport(RegistryTransport):
             return resp
 
     @property
-    def create_api(self) -> Callable[
-            [registry_service.CreateApiRequest],
-            registry_models.Api]:
+    def create_api(
+        self,
+    ) -> Callable[[registry_service.CreateApiRequest], registry_models.Api]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._CreateApi(self._session, self._host, self._interceptor) # type: ignore
+        return self._CreateApi(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def create_api_deployment(self) -> Callable[
-            [registry_service.CreateApiDeploymentRequest],
-            registry_models.ApiDeployment]:
+    def create_api_deployment(
+        self,
+    ) -> Callable[
+        [registry_service.CreateApiDeploymentRequest], registry_models.ApiDeployment
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._CreateApiDeployment(self._session, self._host, self._interceptor) # type: ignore
+        return self._CreateApiDeployment(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def create_api_spec(self) -> Callable[
-            [registry_service.CreateApiSpecRequest],
-            registry_models.ApiSpec]:
+    def create_api_spec(
+        self,
+    ) -> Callable[[registry_service.CreateApiSpecRequest], registry_models.ApiSpec]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._CreateApiSpec(self._session, self._host, self._interceptor) # type: ignore
+        return self._CreateApiSpec(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def create_api_version(self) -> Callable[
-            [registry_service.CreateApiVersionRequest],
-            registry_models.ApiVersion]:
+    def create_api_version(
+        self,
+    ) -> Callable[
+        [registry_service.CreateApiVersionRequest], registry_models.ApiVersion
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._CreateApiVersion(self._session, self._host, self._interceptor) # type: ignore
+        return self._CreateApiVersion(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def create_artifact(self) -> Callable[
-            [registry_service.CreateArtifactRequest],
-            registry_models.Artifact]:
+    def create_artifact(
+        self,
+    ) -> Callable[[registry_service.CreateArtifactRequest], registry_models.Artifact]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._CreateArtifact(self._session, self._host, self._interceptor) # type: ignore
+        return self._CreateArtifact(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def delete_api(self) -> Callable[
-            [registry_service.DeleteApiRequest],
-            empty_pb2.Empty]:
+    def delete_api(
+        self,
+    ) -> Callable[[registry_service.DeleteApiRequest], empty_pb2.Empty]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._DeleteApi(self._session, self._host, self._interceptor) # type: ignore
+        return self._DeleteApi(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def delete_api_deployment(self) -> Callable[
-            [registry_service.DeleteApiDeploymentRequest],
-            empty_pb2.Empty]:
+    def delete_api_deployment(
+        self,
+    ) -> Callable[[registry_service.DeleteApiDeploymentRequest], empty_pb2.Empty]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._DeleteApiDeployment(self._session, self._host, self._interceptor) # type: ignore
+        return self._DeleteApiDeployment(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def delete_api_deployment_revision(self) -> Callable[
-            [registry_service.DeleteApiDeploymentRevisionRequest],
-            registry_models.ApiDeployment]:
+    def delete_api_deployment_revision(
+        self,
+    ) -> Callable[
+        [registry_service.DeleteApiDeploymentRevisionRequest],
+        registry_models.ApiDeployment,
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._DeleteApiDeploymentRevision(self._session, self._host, self._interceptor) # type: ignore
+        return self._DeleteApiDeploymentRevision(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def delete_api_spec(self) -> Callable[
-            [registry_service.DeleteApiSpecRequest],
-            empty_pb2.Empty]:
+    def delete_api_spec(
+        self,
+    ) -> Callable[[registry_service.DeleteApiSpecRequest], empty_pb2.Empty]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._DeleteApiSpec(self._session, self._host, self._interceptor) # type: ignore
+        return self._DeleteApiSpec(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def delete_api_spec_revision(self) -> Callable[
-            [registry_service.DeleteApiSpecRevisionRequest],
-            registry_models.ApiSpec]:
+    def delete_api_spec_revision(
+        self,
+    ) -> Callable[
+        [registry_service.DeleteApiSpecRevisionRequest], registry_models.ApiSpec
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._DeleteApiSpecRevision(self._session, self._host, self._interceptor) # type: ignore
+        return self._DeleteApiSpecRevision(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def delete_api_version(self) -> Callable[
-            [registry_service.DeleteApiVersionRequest],
-            empty_pb2.Empty]:
+    def delete_api_version(
+        self,
+    ) -> Callable[[registry_service.DeleteApiVersionRequest], empty_pb2.Empty]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._DeleteApiVersion(self._session, self._host, self._interceptor) # type: ignore
+        return self._DeleteApiVersion(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def delete_artifact(self) -> Callable[
-            [registry_service.DeleteArtifactRequest],
-            empty_pb2.Empty]:
+    def delete_artifact(
+        self,
+    ) -> Callable[[registry_service.DeleteArtifactRequest], empty_pb2.Empty]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._DeleteArtifact(self._session, self._host, self._interceptor) # type: ignore
+        return self._DeleteArtifact(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def get_api(self) -> Callable[
-            [registry_service.GetApiRequest],
-            registry_models.Api]:
+    def get_api(
+        self,
+    ) -> Callable[[registry_service.GetApiRequest], registry_models.Api]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._GetApi(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetApi(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def get_api_deployment(self) -> Callable[
-            [registry_service.GetApiDeploymentRequest],
-            registry_models.ApiDeployment]:
+    def get_api_deployment(
+        self,
+    ) -> Callable[
+        [registry_service.GetApiDeploymentRequest], registry_models.ApiDeployment
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._GetApiDeployment(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetApiDeployment(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def get_api_spec(self) -> Callable[
-            [registry_service.GetApiSpecRequest],
-            registry_models.ApiSpec]:
+    def get_api_spec(
+        self,
+    ) -> Callable[[registry_service.GetApiSpecRequest], registry_models.ApiSpec]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._GetApiSpec(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetApiSpec(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def get_api_spec_contents(self) -> Callable[
-            [registry_service.GetApiSpecContentsRequest],
-            httpbody_pb2.HttpBody]:
+    def get_api_spec_contents(
+        self,
+    ) -> Callable[[registry_service.GetApiSpecContentsRequest], httpbody_pb2.HttpBody]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._GetApiSpecContents(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetApiSpecContents(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def get_api_version(self) -> Callable[
-            [registry_service.GetApiVersionRequest],
-            registry_models.ApiVersion]:
+    def get_api_version(
+        self,
+    ) -> Callable[[registry_service.GetApiVersionRequest], registry_models.ApiVersion]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._GetApiVersion(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetApiVersion(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def get_artifact(self) -> Callable[
-            [registry_service.GetArtifactRequest],
-            registry_models.Artifact]:
+    def get_artifact(
+        self,
+    ) -> Callable[[registry_service.GetArtifactRequest], registry_models.Artifact]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._GetArtifact(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetArtifact(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def get_artifact_contents(self) -> Callable[
-            [registry_service.GetArtifactContentsRequest],
-            httpbody_pb2.HttpBody]:
+    def get_artifact_contents(
+        self,
+    ) -> Callable[[registry_service.GetArtifactContentsRequest], httpbody_pb2.HttpBody]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._GetArtifactContents(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetArtifactContents(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def list_api_deployment_revisions(self) -> Callable[
-            [registry_service.ListApiDeploymentRevisionsRequest],
-            registry_service.ListApiDeploymentRevisionsResponse]:
+    def list_api_deployment_revisions(
+        self,
+    ) -> Callable[
+        [registry_service.ListApiDeploymentRevisionsRequest],
+        registry_service.ListApiDeploymentRevisionsResponse,
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._ListApiDeploymentRevisions(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListApiDeploymentRevisions(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def list_api_deployments(self) -> Callable[
-            [registry_service.ListApiDeploymentsRequest],
-            registry_service.ListApiDeploymentsResponse]:
+    def list_api_deployments(
+        self,
+    ) -> Callable[
+        [registry_service.ListApiDeploymentsRequest],
+        registry_service.ListApiDeploymentsResponse,
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._ListApiDeployments(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListApiDeployments(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def list_apis(self) -> Callable[
-            [registry_service.ListApisRequest],
-            registry_service.ListApisResponse]:
+    def list_apis(
+        self,
+    ) -> Callable[
+        [registry_service.ListApisRequest], registry_service.ListApisResponse
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._ListApis(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListApis(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def list_api_spec_revisions(self) -> Callable[
-            [registry_service.ListApiSpecRevisionsRequest],
-            registry_service.ListApiSpecRevisionsResponse]:
+    def list_api_spec_revisions(
+        self,
+    ) -> Callable[
+        [registry_service.ListApiSpecRevisionsRequest],
+        registry_service.ListApiSpecRevisionsResponse,
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._ListApiSpecRevisions(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListApiSpecRevisions(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def list_api_specs(self) -> Callable[
-            [registry_service.ListApiSpecsRequest],
-            registry_service.ListApiSpecsResponse]:
+    def list_api_specs(
+        self,
+    ) -> Callable[
+        [registry_service.ListApiSpecsRequest], registry_service.ListApiSpecsResponse
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._ListApiSpecs(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListApiSpecs(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def list_api_versions(self) -> Callable[
-            [registry_service.ListApiVersionsRequest],
-            registry_service.ListApiVersionsResponse]:
+    def list_api_versions(
+        self,
+    ) -> Callable[
+        [registry_service.ListApiVersionsRequest],
+        registry_service.ListApiVersionsResponse,
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._ListApiVersions(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListApiVersions(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def list_artifacts(self) -> Callable[
-            [registry_service.ListArtifactsRequest],
-            registry_service.ListArtifactsResponse]:
+    def list_artifacts(
+        self,
+    ) -> Callable[
+        [registry_service.ListArtifactsRequest], registry_service.ListArtifactsResponse
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._ListArtifacts(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListArtifacts(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def replace_artifact(self) -> Callable[
-            [registry_service.ReplaceArtifactRequest],
-            registry_models.Artifact]:
+    def replace_artifact(
+        self,
+    ) -> Callable[[registry_service.ReplaceArtifactRequest], registry_models.Artifact]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._ReplaceArtifact(self._session, self._host, self._interceptor) # type: ignore
+        return self._ReplaceArtifact(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def rollback_api_deployment(self) -> Callable[
-            [registry_service.RollbackApiDeploymentRequest],
-            registry_models.ApiDeployment]:
+    def rollback_api_deployment(
+        self,
+    ) -> Callable[
+        [registry_service.RollbackApiDeploymentRequest], registry_models.ApiDeployment
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._RollbackApiDeployment(self._session, self._host, self._interceptor) # type: ignore
+        return self._RollbackApiDeployment(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def rollback_api_spec(self) -> Callable[
-            [registry_service.RollbackApiSpecRequest],
-            registry_models.ApiSpec]:
+    def rollback_api_spec(
+        self,
+    ) -> Callable[[registry_service.RollbackApiSpecRequest], registry_models.ApiSpec]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._RollbackApiSpec(self._session, self._host, self._interceptor) # type: ignore
+        return self._RollbackApiSpec(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def tag_api_deployment_revision(self) -> Callable[
-            [registry_service.TagApiDeploymentRevisionRequest],
-            registry_models.ApiDeployment]:
+    def tag_api_deployment_revision(
+        self,
+    ) -> Callable[
+        [registry_service.TagApiDeploymentRevisionRequest],
+        registry_models.ApiDeployment,
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._TagApiDeploymentRevision(self._session, self._host, self._interceptor) # type: ignore
+        return self._TagApiDeploymentRevision(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def tag_api_spec_revision(self) -> Callable[
-            [registry_service.TagApiSpecRevisionRequest],
-            registry_models.ApiSpec]:
+    def tag_api_spec_revision(
+        self,
+    ) -> Callable[
+        [registry_service.TagApiSpecRevisionRequest], registry_models.ApiSpec
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._TagApiSpecRevision(self._session, self._host, self._interceptor) # type: ignore
+        return self._TagApiSpecRevision(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def update_api(self) -> Callable[
-            [registry_service.UpdateApiRequest],
-            registry_models.Api]:
+    def update_api(
+        self,
+    ) -> Callable[[registry_service.UpdateApiRequest], registry_models.Api]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._UpdateApi(self._session, self._host, self._interceptor) # type: ignore
+        return self._UpdateApi(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def update_api_deployment(self) -> Callable[
-            [registry_service.UpdateApiDeploymentRequest],
-            registry_models.ApiDeployment]:
+    def update_api_deployment(
+        self,
+    ) -> Callable[
+        [registry_service.UpdateApiDeploymentRequest], registry_models.ApiDeployment
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._UpdateApiDeployment(self._session, self._host, self._interceptor) # type: ignore
+        return self._UpdateApiDeployment(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def update_api_spec(self) -> Callable[
-            [registry_service.UpdateApiSpecRequest],
-            registry_models.ApiSpec]:
+    def update_api_spec(
+        self,
+    ) -> Callable[[registry_service.UpdateApiSpecRequest], registry_models.ApiSpec]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._UpdateApiSpec(self._session, self._host, self._interceptor) # type: ignore
+        return self._UpdateApiSpec(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
-    def update_api_version(self) -> Callable[
-            [registry_service.UpdateApiVersionRequest],
-            registry_models.ApiVersion]:
+    def update_api_version(
+        self,
+    ) -> Callable[
+        [registry_service.UpdateApiVersionRequest], registry_models.ApiVersion
+    ]:
         # The return type is fine, but mypy isn't sophisticated enough to determine what's going on here.
         # In C++ this would require a dynamic_cast
-        return self._UpdateApiVersion(self._session, self._host, self._interceptor) # type: ignore
+        return self._UpdateApiVersion(self._session, self._host, self._interceptor)  # type: ignore
 
     @property
     def get_location(self):
-        return self._GetLocation(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetLocation(self._session, self._host, self._interceptor)  # type: ignore
 
     class _GetLocation(RegistryRestStub):
-        def __call__(self,
-            request: locations_pb2.GetLocationRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> locations_pb2.Location:
+        def __call__(
+            self,
+            request: locations_pb2.GetLocationRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> locations_pb2.Location:
 
             r"""Call the get location method over HTTP.
 
@@ -4534,26 +5206,26 @@ class RegistryRestTransport(RegistryTransport):
                 locations_pb2.Location: Response from GetLocation method.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*}",
+                },
             ]
 
             request, metadata = self._interceptor.pre_get_location(request, metadata)
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -4574,15 +5246,17 @@ class RegistryRestTransport(RegistryTransport):
 
     @property
     def list_locations(self):
-        return self._ListLocations(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListLocations(self._session, self._host, self._interceptor)  # type: ignore
 
     class _ListLocations(RegistryRestStub):
-        def __call__(self,
-            request: locations_pb2.ListLocationsRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> locations_pb2.ListLocationsResponse:
+        def __call__(
+            self,
+            request: locations_pb2.ListLocationsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> locations_pb2.ListLocationsResponse:
 
             r"""Call the list locations method over HTTP.
 
@@ -4599,26 +5273,26 @@ class RegistryRestTransport(RegistryTransport):
                 locations_pb2.ListLocationsResponse: Response from ListLocations method.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*}/locations',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*}/locations",
+                },
             ]
 
             request, metadata = self._interceptor.pre_list_locations(request, metadata)
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -4639,15 +5313,17 @@ class RegistryRestTransport(RegistryTransport):
 
     @property
     def get_iam_policy(self):
-        return self._GetIamPolicy(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetIamPolicy(self._session, self._host, self._interceptor)  # type: ignore
 
     class _GetIamPolicy(RegistryRestStub):
-        def __call__(self,
-            request: iam_policy_pb2.GetIamPolicyRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> policy_pb2.Policy:
+        def __call__(
+            self,
+            request: iam_policy_pb2.GetIamPolicyRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> policy_pb2.Policy:
 
             r"""Call the get iam policy method over HTTP.
 
@@ -4664,62 +5340,62 @@ class RegistryRestTransport(RegistryTransport):
                 policy_pb2.Policy: Response from GetIamPolicy method.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/deployments/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/artifacts/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/artifacts/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/artifacts/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/instances/*}:getIamPolicy',
-            },
-{
-                'method': 'get',
-                'uri': '/v1/{resource=projects/*/locations/*/runtime}:getIamPolicy',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/deployments/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/artifacts/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/artifacts/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/artifacts/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/instances/*}:getIamPolicy",
+                },
+                {
+                    "method": "get",
+                    "uri": "/v1/{resource=projects/*/locations/*/runtime}:getIamPolicy",
+                },
             ]
 
             request, metadata = self._interceptor.pre_get_iam_policy(request, metadata)
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -4740,15 +5416,17 @@ class RegistryRestTransport(RegistryTransport):
 
     @property
     def set_iam_policy(self):
-        return self._SetIamPolicy(self._session, self._host, self._interceptor) # type: ignore
+        return self._SetIamPolicy(self._session, self._host, self._interceptor)  # type: ignore
 
     class _SetIamPolicy(RegistryRestStub):
-        def __call__(self,
-            request: iam_policy_pb2.SetIamPolicyRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> policy_pb2.Policy:
+        def __call__(
+            self,
+            request: iam_policy_pb2.SetIamPolicyRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> policy_pb2.Policy:
 
             r"""Call the set iam policy method over HTTP.
 
@@ -4765,73 +5443,73 @@ class RegistryRestTransport(RegistryTransport):
                 policy_pb2.Policy: Response from SetIamPolicy method.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/deployments/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/artifacts/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/artifacts/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/artifacts/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/instances/*}:setIamPolicy',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/runtime}:setIamPolicy',
-                'body': '*',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/deployments/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/artifacts/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/artifacts/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/artifacts/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/instances/*}:setIamPolicy",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/runtime}:setIamPolicy",
+                    "body": "*",
+                },
             ]
 
             request, metadata = self._interceptor.pre_set_iam_policy(request, metadata)
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            body = json.loads(json.dumps(transcoded_request['body']))
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            body = json.loads(json.dumps(transcoded_request["body"]))
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -4853,15 +5531,17 @@ class RegistryRestTransport(RegistryTransport):
 
     @property
     def test_iam_permissions(self):
-        return self._TestIamPermissions(self._session, self._host, self._interceptor) # type: ignore
+        return self._TestIamPermissions(self._session, self._host, self._interceptor)  # type: ignore
 
     class _TestIamPermissions(RegistryRestStub):
-        def __call__(self,
-            request: iam_policy_pb2.TestIamPermissionsRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> iam_policy_pb2.TestIamPermissionsResponse:
+        def __call__(
+            self,
+            request: iam_policy_pb2.TestIamPermissionsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> iam_policy_pb2.TestIamPermissionsResponse:
 
             r"""Call the test iam permissions method over HTTP.
 
@@ -4878,73 +5558,75 @@ class RegistryRestTransport(RegistryTransport):
                 iam_policy_pb2.TestIamPermissionsResponse: Response from TestIamPermissions method.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/deployments/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/artifacts/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/artifacts/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/artifacts/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/instances/*}:testIamPermissions',
-                'body': '*',
-            },
-{
-                'method': 'post',
-                'uri': '/v1/{resource=projects/*/locations/*/runtime}:testIamPermissions',
-                'body': '*',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/deployments/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/artifacts/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/artifacts/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/artifacts/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/apis/*/versions/*/specs/*/artifacts/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/instances/*}:testIamPermissions",
+                    "body": "*",
+                },
+                {
+                    "method": "post",
+                    "uri": "/v1/{resource=projects/*/locations/*/runtime}:testIamPermissions",
+                    "body": "*",
+                },
             ]
 
-            request, metadata = self._interceptor.pre_test_iam_permissions(request, metadata)
+            request, metadata = self._interceptor.pre_test_iam_permissions(
+                request, metadata
+            )
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            body = json.loads(json.dumps(transcoded_request['body']))
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            body = json.loads(json.dumps(transcoded_request["body"]))
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -4966,15 +5648,17 @@ class RegistryRestTransport(RegistryTransport):
 
     @property
     def cancel_operation(self):
-        return self._CancelOperation(self._session, self._host, self._interceptor) # type: ignore
+        return self._CancelOperation(self._session, self._host, self._interceptor)  # type: ignore
 
     class _CancelOperation(RegistryRestStub):
-        def __call__(self,
-            request: operations_pb2.CancelOperationRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> None:
+        def __call__(
+            self,
+            request: operations_pb2.CancelOperationRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> None:
 
             r"""Call the cancel operation method over HTTP.
 
@@ -4988,28 +5672,30 @@ class RegistryRestTransport(RegistryTransport):
                     sent along with the request as metadata.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'post',
-                'uri': '/v1/{name=projects/*/locations/*/operations/*}:cancel',
-                'body': '*',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "post",
+                    "uri": "/v1/{name=projects/*/locations/*/operations/*}:cancel",
+                    "body": "*",
+                },
             ]
 
-            request, metadata = self._interceptor.pre_cancel_operation(request, metadata)
+            request, metadata = self._interceptor.pre_cancel_operation(
+                request, metadata
+            )
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            body = json.loads(json.dumps(transcoded_request['body']))
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            body = json.loads(json.dumps(transcoded_request["body"]))
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -5028,15 +5714,17 @@ class RegistryRestTransport(RegistryTransport):
 
     @property
     def delete_operation(self):
-        return self._DeleteOperation(self._session, self._host, self._interceptor) # type: ignore
+        return self._DeleteOperation(self._session, self._host, self._interceptor)  # type: ignore
 
     class _DeleteOperation(RegistryRestStub):
-        def __call__(self,
-            request: operations_pb2.DeleteOperationRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> None:
+        def __call__(
+            self,
+            request: operations_pb2.DeleteOperationRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> None:
 
             r"""Call the delete operation method over HTTP.
 
@@ -5050,26 +5738,28 @@ class RegistryRestTransport(RegistryTransport):
                     sent along with the request as metadata.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'delete',
-                'uri': '/v1/{name=projects/*/locations/*/operations/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "delete",
+                    "uri": "/v1/{name=projects/*/locations/*/operations/*}",
+                },
             ]
 
-            request, metadata = self._interceptor.pre_delete_operation(request, metadata)
+            request, metadata = self._interceptor.pre_delete_operation(
+                request, metadata
+            )
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -5087,15 +5777,17 @@ class RegistryRestTransport(RegistryTransport):
 
     @property
     def get_operation(self):
-        return self._GetOperation(self._session, self._host, self._interceptor) # type: ignore
+        return self._GetOperation(self._session, self._host, self._interceptor)  # type: ignore
 
     class _GetOperation(RegistryRestStub):
-        def __call__(self,
-            request: operations_pb2.GetOperationRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> operations_pb2.Operation:
+        def __call__(
+            self,
+            request: operations_pb2.GetOperationRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> operations_pb2.Operation:
 
             r"""Call the get operation method over HTTP.
 
@@ -5112,26 +5804,26 @@ class RegistryRestTransport(RegistryTransport):
                 operations_pb2.Operation: Response from GetOperation method.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*/operations/*}',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*/operations/*}",
+                },
             ]
 
             request, metadata = self._interceptor.pre_get_operation(request, metadata)
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -5152,15 +5844,17 @@ class RegistryRestTransport(RegistryTransport):
 
     @property
     def list_operations(self):
-        return self._ListOperations(self._session, self._host, self._interceptor) # type: ignore
+        return self._ListOperations(self._session, self._host, self._interceptor)  # type: ignore
 
     class _ListOperations(RegistryRestStub):
-        def __call__(self,
-            request: operations_pb2.ListOperationsRequest, *,
-            retry: OptionalRetry=gapic_v1.method.DEFAULT,
-            timeout: float=None,
-            metadata: Sequence[Tuple[str, str]]=(),
-            ) -> operations_pb2.ListOperationsResponse:
+        def __call__(
+            self,
+            request: operations_pb2.ListOperationsRequest,
+            *,
+            retry: OptionalRetry = gapic_v1.method.DEFAULT,
+            timeout: float = None,
+            metadata: Sequence[Tuple[str, str]] = (),
+        ) -> operations_pb2.ListOperationsResponse:
 
             r"""Call the list operations method over HTTP.
 
@@ -5177,26 +5871,26 @@ class RegistryRestTransport(RegistryTransport):
                 operations_pb2.ListOperationsResponse: Response from ListOperations method.
             """
 
-            http_options: List[Dict[str, str]] = [{
-                'method': 'get',
-                'uri': '/v1/{name=projects/*/locations/*}/operations',
-            },
+            http_options: List[Dict[str, str]] = [
+                {
+                    "method": "get",
+                    "uri": "/v1/{name=projects/*/locations/*}/operations",
+                },
             ]
 
             request, metadata = self._interceptor.pre_list_operations(request, metadata)
             request_kwargs = json_format.MessageToDict(request)
-            transcoded_request = path_template.transcode(
-                http_options, **request_kwargs)
+            transcoded_request = path_template.transcode(http_options, **request_kwargs)
 
-            uri = transcoded_request['uri']
-            method = transcoded_request['method']
+            uri = transcoded_request["uri"]
+            method = transcoded_request["method"]
 
             # Jsonify the query params
-            query_params = json.loads(json.dumps(transcoded_request['query_params']))
+            query_params = json.loads(json.dumps(transcoded_request["query_params"]))
 
             # Send the request
             headers = dict(metadata)
-            headers['Content-Type'] = 'application/json'
+            headers["Content-Type"] = "application/json"
 
             response = getattr(self._session, method)(
                 "{host}{uri}".format(host=self._host, uri=uri),
@@ -5223,6 +5917,4 @@ class RegistryRestTransport(RegistryTransport):
         self._session.close()
 
 
-__all__=(
-    'RegistryRestTransport',
-)
+__all__ = ("RegistryRestTransport",)
